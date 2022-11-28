@@ -1,0 +1,18 @@
+Change log of gptsymmetry
+=========================
+
+Version 1.1 from 2019-10-29
+---------------------------
+
+ - fixed serious bug in option "-which (dark|light)", which
+   lead to randomly erroneous symmetry score:
+   rx and ry now defined as long (instead of unsigned long) so that
+   they can be multiplied with negative constants
+
+ - info how to enable optimization during compilation in Readme added
+
+
+Version 1.0 from 2019-07-09
+---------------------------
+
+ - first creation
