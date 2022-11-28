@@ -6,18 +6,16 @@ score to each pixel in a grayscale image. This score values can be used for
 detecting symmetric objects or for extracting medial axes, e.g. from blood
 vessels.
 
-This is the source code of the program *gptsymmetry*, which implements
-the algorithm described in (cited as "IPOL paper" below):
+This code implements the algorithm described in (cited as "IPOL paper" below):
 
 > C. Dalitz, J. Wilberg: "The Gradient Product Transform:
 > An Image Filter for Symmetry Detection."  Image Processing On Line, 9
 > (2019), pp. 413–431
 > https://doi.org/10.5201/ipol.2019.270
 
-gptsymmetry reads a PNG image, prints the detected symmetries to stdout
-and optionally writes images showing a skeleton of symmetry axes and
-of the detected symmetric objects.
-
+Please cite this article when using the code. The article was published on
+IPOL with version 1.1 of this code. For changes since then, see the file
+*CHANGES*.
 
 Compilation
 -----------
@@ -54,7 +52,11 @@ This will mark the detected symmetries in the result image file "result.png".
 Usage
 -----
 
-Calling gptsymmetry without any or with an unknown option (e.g. "-?")
+The command line program *gptsymmetry* reads a PNG image, prints the detected
+symmetries to stdout and optionally writes images showing a skeleton of
+symmetry axes and of the detected symmetric objects.
+
+Calling *gptsymmetry* without any or with an unknown option (e.g. "-?")
 will print a usage message. The meaning of the parameters controlling
 the algorithm is explained in the IPOL paper.
 
