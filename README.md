@@ -90,13 +90,13 @@ only rotational symmetries, you can pipe the output to grep as follows:
 Source Files
 ------------
 
-png++/
+ - ``png++/``
    this is a copy of libpng++ version 0.2.9 from https://www.nongnu.org/pngpp/
    with two modifications to error.hpp:
     - fix for bug #46312 applied
 	- strerror_r redifened as strerror_s for MSVC compiler
 
-main.cpp
+ - ``main.cpp``
    Main program that implmenting Algorithms 1-3
    (sections 2 & 3 in the IPOL paper)
 
