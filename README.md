@@ -64,11 +64,11 @@ The input file must be in PNG format. With the option "-o <outfile>", the
 detected symmetry regions are darwn into the image and written to <outfile>.
 Unless the option "-notrace" is given, three additional images are written:
 
-  trace-symmetry.png:
-    the GPT symmetry score converted to grayscale
-  trace-ridges.png:
+ - ``trace-symmetry.png``  
+   the GPT symmetry score converted to grayscale
+ - ``trace-ridges.png``  
     skeletons of symmetry axes
-  trac-localmaxpoints.png:
+ - ``trace-localmaxpoints.png``
     the symmetry regions classified into axial (red) an rotational (cyan)
 
 The detected symmetry regions are printed to stdout in the following format:
