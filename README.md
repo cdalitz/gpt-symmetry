@@ -12,6 +12,7 @@ the algorithm described in (cited as "IPOL paper" below):
 > C. Dalitz, J. Wilberg: "The Gradient Product Transform:
 > An Image Filter for Symmetry Detection."  Image Processing On Line, 9
 > (2019), pp. 413–431
+> https://doi.org/10.5201/ipol.2019.270
 
 gptsymmetry reads a PNG image, prints the detected symmetries to stdout
 and optionally writes images showing a skeleton of symmetry axes and
@@ -35,18 +36,17 @@ Before running cmake, you should adjust the variable NUM_THREADS in
 CMakeLists.txt to the number of kernels on your system.
 
 Starting from the root directory (i.e., the directory, in which this
-Readme file is located), the executable "gptsymmetry" is created with
-($ is the shell prompt):
+Readme file is located), the executable "gptsymmetry" is created with:
 
-  $ mkdir build
-  $ cd build
-  $ cmake .. -DCMAKE_BUILD_TYPE=Release
-  $ make
+    mkdir build
+    cd build
+    cmake .. -DCMAKE_BUILD_TYPE=Release
+    make
 
 To test the program, you can apply it to the test image included in this
 source package as follows:
 
-  $ gptsymmetry -r 80 -o result.png ../testimage.png
+    gptsymmetry -r 80 -o result.png ../testimage.png
 
 This will mark the detected symmetries in the result image file "result.png".
 
@@ -71,18 +71,18 @@ Unless the option "-notrace" is given, three additional images are written:
 
 The detected symmetry regions are printed to stdout in the following format:
 
-  rot;x;y;rx;ry;S;s_norm
-  0;142;317;5;23;5044167.206566;0.903770
-  0;141;325;5;14;4800286.097710;0.947354
-  1;295;198;32;33;4569864.069128;0.784917
-  0;106;298;38;42;3361987.012759;0.720138
+    rot;x;y;rx;ry;S;s_norm
+    0;142;317;5;23;5044167.206566;0.903770
+    0;141;325;5;14;4800286.097710;0.947354
+    1;295;198;32;33;4569864.069128;0.784917
+    0;106;298;38;42;3361987.012759;0.720138
 
 where "rot" indicates rotational (1) or axial (0) symmetry, (x,y) is the
 center and (rx,ry) the size of the symmetry region, S is the GPT score,
 and s_norm is the normalized GPT score between zero and one. Thus, to report
 only rotational symmetries, you can pipe the output to grep as follows:
 
-  $ gptsymmetry -r 100 -notrace test.png | grep '^1'
+    gptsymmetry -r 100 -notrace test.png | grep '^1'
 
 
 Source Files
