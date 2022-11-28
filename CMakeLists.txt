@@ -10,8 +10,8 @@ else ()
 endif ()
 
 # for compilation with optimization
-if(NOT CMAKE_BUILD_TYPE)
-  set(CMAKE_BUILD_TYPE Release)
+if (NOT CMAKE_BUILD_TYPE AND NOT CMAKE_BUILD_TYPE STREQUAL "")
+  set (CMAKE_BUILD_TYPE "Release" CACHE STRING "" FORCE)
 endif()
 
 project(gptsymmetry)
@@ -24,7 +24,7 @@ if (MSVC)
   cmake_policy(SET CMP0074 NEW)
 endif (MSVC)
 
-set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -O0")
+#set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -O0")
 #set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 
 # libpng dependency

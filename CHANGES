@@ -1,6 +1,9 @@
 Change log of gptsymmetry
 =========================
 
+ - set CMAKE_BUILD_TYPE to "Release" by default
+
+
 Version 1.1 from 2019-10-29
 ---------------------------
 
