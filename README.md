@@ -100,16 +100,17 @@ Source Files
    Main program that implmenting Algorithms 1-3
    (sections 2 & 3 in the IPOL paper)
 
-point.h
+ - ``point.h``
    Implements types and function related to 2D points.
 
-image.[h|cpp]
+ - ``image.[h|cpp]``
    Implements three image types (Gray, RGB, Float)
 
-image_processing.[h|cpp]
+ - ``image_processing.[h|cpp]``
 
-symmetry_transform.[h|cpp]
-   Implementats functions for individual steps in Algorithms 1-3.
+ - ``symmetry_transform.[h|cpp]``
+   Implementats functions for individual steps in Algorithms 1-3 of the
+   IPOL paper.
 
 
 
@@ -121,5 +122,5 @@ Institute for Pattern Recognition
 Niederrhein University of Applied Sciences
 Krefeld, Germany
 
-The software includes the library png++ by Alexander Shulgin, available
-from https://www.nongnu.org/pngpp/. See the directory src/png++ for details.
+The software includes the library *png++* by Alexander Shulgin, available
+from https://www.nongnu.org/pngpp/. See the directory *src/png++* for details.
